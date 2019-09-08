@@ -17,7 +17,11 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
-        "tsingsun/yii2-swoole": "^2.3"
+        "tsingsun/yii2-swoole": "^2.3",
+        "yiisoft/yii2-redis": "^2.0",
+        "yiisoft/yii2-queue": "^2.3",
+        "enqueue/amqp-lib": "^0.9.12",
+        "swoole/ide-helper": "^4.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
