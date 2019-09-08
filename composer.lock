@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c8ecfb628a9925dfa6b7d4bc03c6ffd",
+    "content-hash": "16de4d23e8d5f6b6b944f1ceb14a941f",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -660,6 +660,53 @@
                 "shim"
             ],
             "time": "2019-08-06T08:03:45+00:00"
+        },
+        {
+            "name": "tsingsun/yii2-swoole",
+            "version": "2.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tsingsun/yii2-swoole.git",
+                "reference": "9f8c411c0f2719696be4349a7dd140f1448fb6f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tsingsun/yii2-swoole/zipball/9f8c411c0f2719696be4349a7dd140f1448fb6f6",
+                "reference": "9f8c411c0f2719696be4349a7dd140f1448fb6f6",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "swoole/ide-helper": "~4.3.0",
+                "yiisoft/yii2-redis": "^2.0"
+            },
+            "suggest": {
+                "ext-swoole": "install ext-swoole when use php swoole extension"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "tsingsun\\swoole\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "run yii2 in swoole coroutine mode",
+            "keywords": [
+                "coroutine",
+                "swoole",
+                "yii2"
+            ],
+            "time": "2019-07-02T06:36:51+00:00"
         },
         {
             "name": "yiisoft/yii2",

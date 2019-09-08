@@ -61,7 +61,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $data = array(
+            'code' => 0,
+            'msg' => 'success',
+        );
+        return $this->asJson($data);
+        //return $this->render('index');
     }
 
     /**
