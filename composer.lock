@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a160ed4a93e3106c9422c2d46a477ac",
+    "content-hash": "269b23dedd0c962809fbb130658ca73a",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -3703,7 +3703,7 @@
         },
         {
             "name": "swoole/ide-helper",
-            "version": "dev-master",
+            "version": "4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoole/ide-helper.git",
@@ -4740,9 +4740,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "swoole/ide-helper": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
