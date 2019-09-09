@@ -20,8 +20,7 @@
         "tsingsun/yii2-swoole": "^2.3",
         "yiisoft/yii2-redis": "^2.0",
         "yiisoft/yii2-queue": "^2.3",
-        "enqueue/amqp-lib": "^0.9.12",
-        "swoole/ide-helper": "^4.4"
+        "enqueue/amqp-lib": "^0.9.12"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -31,7 +30,8 @@
         "codeception/base": "~2.3.0",
         "codeception/verify": "~0.4.0",
         "codeception/specify": "~0.4.6",
-        "symfony/browser-kit": ">=2.7 <=4.2.4"
+        "symfony/browser-kit": ">=2.7 <=4.2.4",
+        "swoole/ide-helper": "@dev"
     },
     "config": {
         "process-timeout": 1800,
