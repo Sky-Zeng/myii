@@ -63,9 +63,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //Yii::$app->redis->setex('test111', 5, 'marko');
-        //Yii::error('hehe....');
-        Yii::$app->queue->delay(30)->push(new LogJob([
-            'msg' => 'haohao1'
+        //Yii::error('hehe....');//->delay(30)
+        Yii::$app->queue->push(new LogJob([
+            'msg' => 'something error.'
             ])
         );
         $data = array(

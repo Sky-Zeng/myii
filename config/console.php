@@ -24,11 +24,40 @@ $config = [
             'driver' => yii\queue\amqp_interop\Queue::ENQUEUE_AMQP_LIB,
             'dsn' => 'amqp://guest:guest@localhost:5672/%2F',
         ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            // send all mails to a file by default. You have to set
+            // 'useFileTransport' to false and configure a transport
+            // for the mailer to send real emails.
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.163.com',
+                'username' => 'mrskyzeng@163.com',
+                'password' => 'kang123',
+                'port' => '25',
+                'encryption' => 'tls',
+            ],
+            'messageConfig'=>[
+                'charset'=>'UTF-8',
+                'from'=>['mrskyzeng@163.com'=>'myii']
+            ],
+        ],
         'log' => [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                ],
+                [
+                    'class' => 'yii\log\EmailTarget',
+                    'levels' => ['error'],
+                    //'categories' => ['yii\db\*'],
+                    'message' => [
+                        //'from' => ['log@example.com'],
+                        'to' => ['13580406928@139.com', 'mrskyzeng@qq.com'],
+                        'subject' => 'Database errors at example.com',
+                    ],
                 ],
             ],
         ],
