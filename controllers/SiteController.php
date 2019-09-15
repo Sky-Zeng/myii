@@ -61,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        //Yii::$app->redis->setex('test111', 5, 'marko');
         $data = array(
             'code' => 0,
             'msg' => 'success',

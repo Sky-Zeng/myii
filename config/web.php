@@ -16,8 +16,44 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'pQTsQxuQPjQZ2hHM47Fo9IYas44oXcal',
         ],
+        'connectionManager'=>[
+            'poolConfig'=>[
+                'mysql'=>[
+                    //池容量
+                    'maxActive'=>10,
+                    //当链接数满时,重新获取的等待时间,秒为单位
+                    'waitTime'=> 0.01
+                ],
+                'redis'=>[
+                    //池容量
+                    'maxActive'=>10,
+                    //当链接数满时,重新获取的等待时间,秒为单位
+                    'waitTime'=> 0.01
+                ],
+            ],
+        ],
+        'session' => [
+            //默认cache
+            'class' => 'yii\web\CacheSession',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
+        ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+            'dataTimeout' => 5,//数据传输超时时长
+        ],
+        'queue' => [
+            'class' => yii\queue\amqp_interop\Queue::class,
+            'port' => 5672,
+            'user' => 'guest',
+            'password' => 'guest',
+            'queueName' => 'queue_test',
+            'driver' => yii\queue\amqp_interop\Queue::ENQUEUE_AMQP_LIB,
+            'dsn' => 'amqp://guest:guest@localhost:5672/%2F',
         ],
         'user' => [
             'identityClass' => 'app\models\User',

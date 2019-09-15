@@ -11,26 +11,10 @@ use \tsingsun\swoole\server\Server;
 defined('WEBROOT') or define('WEBROOT', __DIR__ . '/web');
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
-
 defined('COROUTINE_ENV') or define('COROUTINE_ENV', true);
 
 require(__DIR__ . '/vendor/autoload.php');
-$config = [
-    'class' => 'tsingsun\swoole\server\HttpServer',
-//    'timeout'=>2,
-    'setting' => [
-        'daemonize' => 0,
-        'max_coro_num' => 3000,
-        'reactor_num' => 1,
-        'worker_num' => 1,
-        'task_worker_num' => 2,
-        'pid_file' => __DIR__ . '/runtime/http.pid',
-        'log_file' => __DIR__ . '/runtime/logs/swoole.log',
-        'debug_mode' => 0,
-        'enable_coroutine' => COROUTINE_ENV
-
-    ],
-];
+$config = require(__DIR__ . '/config/swoole.php');
 
 Server::run($config, function (Server $server) {
     $starter = new \tsingsun\swoole\bootstrap\WebApp($server);
