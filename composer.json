@@ -20,7 +20,8 @@
         "tsingsun/yii2-swoole": "^2.3",
         "yiisoft/yii2-redis": "^2.0",
         "yiisoft/yii2-queue": "^2.3",
-        "enqueue/amqp-lib": "^0.9.12"
+        "enqueue/amqp-lib": "^0.9.12",
+        "omnilight/yii2-scheduling": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
