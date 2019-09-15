@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\jobs\LogJob;
 
 class SiteController extends Controller
 {
@@ -62,6 +63,11 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //Yii::$app->redis->setex('test111', 5, 'marko');
+        //Yii::error('hehe....');
+        Yii::$app->queue->push(new LogJob([
+            'msg' => 'haohao'
+            ])
+        );
         $data = array(
             'code' => 0,
             'msg' => 'success',
