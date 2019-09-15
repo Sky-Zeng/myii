@@ -64,8 +64,8 @@ class SiteController extends Controller
     {
         //Yii::$app->redis->setex('test111', 5, 'marko');
         //Yii::error('hehe....');
-        Yii::$app->queue->push(new LogJob([
-            'msg' => 'haohao'
+        Yii::$app->queue->delay(30)->push(new LogJob([
+            'msg' => 'haohao1'
             ])
         );
         $data = array(
