@@ -16,7 +16,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'pQTsQxuQPjQZ2hHM47Fo9IYas44oXcal',
         ],
-        'connectionManager'=>[
+        /*'connectionManager'=>[
             'poolConfig'=>[
                 'mysql'=>[
                     //池容量
@@ -31,7 +31,7 @@ $config = [
                     'waitTime'=> 0.01
                 ],
             ],
-        ],
+    ],*/
         'session' => [
             //默认cache
             'class' => 'yii\web\CacheSession',

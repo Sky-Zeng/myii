@@ -21,7 +21,8 @@
         "yiisoft/yii2-redis": "^2.0",
         "yiisoft/yii2-queue": "^2.3",
         "enqueue/amqp-lib": "^0.9.12",
-        "omnilight/yii2-scheduling": "*"
+        "omnilight/yii2-scheduling": "*",
+        "mito/yii2-sentry": "~1.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
