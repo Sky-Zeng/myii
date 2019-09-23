@@ -69,6 +69,29 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
+        'sentry' => [
+            'class' => 'mito\sentry\Component',
+            'dsn' => 'https://8135ad576885456fbe57eecab9191e52@sentry.io/1757421', // private DSN
+            'environment' => 'staging', // if not set, the default is `production`
+            'jsNotifier' => true, // to collect JS errors. Default value is `false`
+            'jsOptions' => [ // raven-js config parameter
+                'whitelistUrls' => [ // collect JS errors from these urls
+                    'http://staging.my-product.com',
+                    'https://my-product.com',
+                ],
+            ],
+        ],
+        'log' => [
+            'targets' => [
+                [
+                    'class' => 'mito\sentry\Target',
+                    'levels' => ['error', 'warning'],
+                    'except' => [
+                        'yii\web\HttpException:404',
+                    ],
+                ],
+            ],
+        ],
         /*'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
